@@ -28,12 +28,12 @@ Para fazer:
     docker-compose up -d
     ```
 
-    Isso iniciará o programa em um contêiner Docker. Você tambem pode acessar a propria aplicação da NHS para visualizar as configurações e estados do nobreak.
+    Isso iniciará o programa em um contêiner Docker. Você tambem pode acessar a propria aplicação da NHS para visualizar as configurações e estados do nobreak. 
+    http://localhost:2001 ou http://endereco_container:2001
 
 Se você configurou tudo corretamente ira aparecer no seu Home Assistant um dispositivo com alguns sensores.
 
 ![Alt text](image.png)
-
 
 
 Espero que essa aplicação sirva seu proposito para você assim como serviu para mim. E conceguir fazer suas automações com o esse projeto.
