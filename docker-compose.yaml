@@ -1,0 +1,17 @@
+---
+version: "3.9"
+services:
+  nhs-nobreak-monitor:
+    image: ruizivo/nhs-nobreak-monitor:latest
+    environment:
+      - MQTT_HOST=192.168.1.30  # endereço do mqtt (pode estar em um local diferente do container)
+      - MQTT_PORT=1883          # porta do mqtt
+      - MQTT_USER=usuario       # usuario mqtt
+      - MQTT_PASS=senha         # senha mqtt
+      - NHS_HOST=192.168.1.20   # endereço onde está o container.
+    ports:
+      - 2001:2001
+    devices:
+     - /dev/ttyACM0:/dev/ttyS0
+    volumes:
+      - ./DATA/AppData/nhs/nhsupsserver.cfg:/var/lib/nhsups/nhsupsserver.cfg
